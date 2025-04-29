@@ -38,7 +38,7 @@ class HomeViewModel @Inject constructor (
     }
 
     fun validateTasks(title: String, desc: String){
-        require(title.isNotEmpty()){"Title cannot be empty"}
+        require(title.isEmpty()){"Title cannot be empty"}
         require(desc.isNotEmpty()){"Description cannot be empty"}
         require(Regex("^[A-Za-z0-9 ]+$").containsMatchIn(title)){"Should not contain special chars"}
     }
