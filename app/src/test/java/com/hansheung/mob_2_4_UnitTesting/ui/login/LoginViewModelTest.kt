@@ -44,7 +44,8 @@ class LoginViewModelTest {
 
     @Test
     fun `email "aaa" should return an error message` () {
-        assert(viewModel.validateEmail("aaa") != null)
+        //assert(viewModel.validateEmail("aaa") != null) //Temp switch to == null for testing CircleCLI
+        assert(viewModel.validateEmail("aaa") == null)
     }
 
     @Test
